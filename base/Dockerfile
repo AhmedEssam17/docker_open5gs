@@ -66,9 +66,11 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg -
     echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list && \
     apt-get update && apt install nodejs -y
 
+RUN echo 1
+
 # Get open5gs code and install
-RUN git clone --recursive https://github.com/open5gs/open5gs && cd open5gs && \
-    git checkout tags/v2.7.2 && meson build --prefix=`pwd`/install && \
+RUN git clone --recursive https://github.com/AhmedEssam17/open5gs.git && cd open5gs && \
+    git checkout pfcp-termination && rm -f -r install build && meson build --prefix=`pwd`/install && \
     ninja -C build && cd build && ninja install && \
     mkdir -p /open5gs/install/include
 

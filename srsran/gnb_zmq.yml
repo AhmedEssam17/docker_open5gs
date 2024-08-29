@@ -1,6 +1,6 @@
 amf:
   addr: AMF_IP                                                                                # The address or hostname of the AMF.
-  bind_addr: SRS_GNB_IP                                                                       # A local IP that the gNB binds to for traffic from the AMF.
+  bind_addr: SRS_GNB_IP                                                                     # A local IP that the gNB binds to for traffic from the AMF.
 
 ru_sdr:
   device_driver: zmq                                                                          # The RF driver name.

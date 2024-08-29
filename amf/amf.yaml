@@ -20,8 +20,6 @@ amf:
       client:
         nrf:
           - uri: http://NRF_IP:7777
-        scp:
-          - uri: http://SCP_IP:7777
     ngap:
       server:
         - address: AMF_IP

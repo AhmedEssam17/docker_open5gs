@@ -20,8 +20,6 @@ nssf:
       client:
         nrf:
           - uri: http://NRF_IP:7777
-        scp:
-          - uri: http://SCP_IP:7777
         nsi:
           - uri: http://NRF_IP:7777
             s_nssai:
